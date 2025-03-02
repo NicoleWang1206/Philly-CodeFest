@@ -271,9 +271,6 @@ body{
     object-fit: contain;      
 }
 
-
-
-
 @keyframes fadeIn {
     from {
         opacity: 0.5;
