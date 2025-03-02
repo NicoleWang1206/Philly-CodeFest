@@ -232,28 +232,41 @@ body{
     align-items: center;
     background-color: #FFE5E2;
     transition: opacity 0.75s, visibility 0.75s;
+    z-index: 9999;
 }
 
-.loader-hidden{
+.loader-hidden {
     opacity: 0;
     visibility: hidden;
 }
 
-.loader::after{
-    content: "";
-    width: 75px;
-    height: 75px;
-    border: 15px solid #dddddd;
-    border-top-color: #F5ABC9;
-    border-radius: 50%;
-    animation: loading 0.75s ease infinite;
+.loader-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
 }
 
-@keyframes loading{
-    from{
-        tranform: rotate(0turn);
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4C4C6D;
+    animation: fadeIn 1s infinite alternate;
+}
+
+.loading-gif {
+    width: 50px !important;  
+    height: 50px !important;  
+    object-fit: contain;      
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
     }
-    to{
-        transform: rotate(1turn);
+    to {
+        opacity: 1;
     }
 }

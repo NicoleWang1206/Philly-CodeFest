@@ -9,6 +9,13 @@
         <script src="script.js" defer></script>
     </head>
 <body>
+    <div class="loader loader-hidden">
+        <div class="loader-content">
+            <span class="loading-text">Loading...</span>
+            <img src="img/pixel_cat_walking.gif" alt="Loading animation" class="loading-gif">
+        </div>
+    </div>
+    
     <div class="wrapper">
         <form action="">
             <h1>Sweet Finds</h1>
@@ -41,29 +48,32 @@
     </div>
 
     <script>
-        // redirects user to loading screen and then products page
-        window.addEventListener("load", () => {
-            const loader = document.querySelector(".loader")
-            
-            loader.classList.add("loader-hidden");
 
-            loader.addEventListener("transitionend", () => {
-                document.body.removeChild("loader");
-            })
-        })
+        document.addEventListener("DOMContentLoaded", () => {
+            let loader = document.querySelector(".loader");
 
-        // redirects user to the products page with the recommendations and products with the best reviews
-        document.querySelector("form").addEventListener("submit", function(event) {
-            event.preventDefault(); 
-        
-            let inputField = document.querySelector(".input-box input");
-            let link = inputField.value.trim();
-        
-            if (link) {
-                let encodedLink = encodeURIComponent(link);
-                    window.location.href = "https://nicolewang1206.github.io/Sweet-Finds/page%202.html";
-            }
+            loader.classList.add("loader-hidden"); // Hide loader initially
+
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                let inputField = document.querySelector(".input-box input");
+                let link = inputField.value.trim();
+
+                if (link) {
+                    let encodedLink = encodeURIComponent(link);
+
+                    loader.classList.remove("loader-hidden"); // Show loader
+
+                    setTimeout(() => {
+                        window.location.href = "https://nicolewang1206.github.io/Sweet-Finds/page%202.html";
+                    }, 1000); // Delay before navigating
+                }
+            });
         });
+
+
+
 
         
     </script>
