@@ -35,6 +35,12 @@ body{
 
 .wrapper {
     width: 420px;
+    opacity: 0; 
+    animation: slideIn 1.5s ease-out forwards; 
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    color: #4C4C6D;
 }
 
 .wrapper h1{
@@ -44,6 +50,12 @@ body{
 
 .product-feedback h2{
     text-align: center;
+    opacity: 0; 
+    animation: slideIn 1.5s ease-out forwards; 
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    color: #4C4C6D;
 }
 
 .wrapper .input-box {

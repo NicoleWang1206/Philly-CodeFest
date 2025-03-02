@@ -8,6 +8,7 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="script.js" defer></script>
     </head>
+
 <body>
     <div class="loader loader-hidden">
         <div class="loader-content">
@@ -15,25 +16,32 @@
             <img src="img/pixel_cat_walking.gif" alt="Loading animation" class="loading-gif">
         </div>
     </div>
-    
+        
     <div class="wrapper">
         <form action="">
             <h1>Sweet Finds</h1>
             <div class="input-box">
-                <input type ="text" placeholder="Paste your Amazon link here" required >
+                <input type="text" placeholder="Paste your Amazon link here" required>
                 <i class='bx bx-search-alt'></i>
             </div>
         </form>
-    <div class="product-feedback">
-        <form action="">
-            <h2>Feedback</h2>
-            <div class="input-box">
-                <input type ="text" placeholder="Provide feedback here" required >
+    
+        <!-- Feedback Section -->
+        <div class="product-feedback">
+            <h2>Likes and Dislikes</h2>
+            <div class="input-boxes">
+                <div class="input-box">
+                    <input type="text" placeholder="What do you like about the product?" required>
+                    <i class='bx bx-pencil'></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="What do you dislike about the product?" required>
+                    <i class='bx bx-pencil'></i>
+                </div>
             </div>
-        </form>
-    </div>
-
-        <!-- along with the "paste link" bar, underneath will show the "how to use" with animation -->
+        </div>
+    
+        <!-- How to Use Section -->
         <div class="how-to-use-text">
             <h1>How to Use</h1>
             Follow these simple steps to find your sweet finds:
@@ -41,14 +49,13 @@
                 <p>1. Paste a link to a product you are searching for</p>
                 <p>2. Provide what you like and dislike about the product</p>
                 <p>3. Sweet Finds will give you the product with the best reviews and highest ratings</p>
-                <p>4. Sweet Finds will also give you recommendations based on the product you are searching for</li>
-                <p>5. Enjoy discovering our recommendations!</li>
+                <p>4. Sweet Finds will also give you recommendations based on the product you are searching for</p>
+                <p>5. Enjoy discovering our recommendations!</p>
             </ul>
         </div>
     </div>
 
     <script>
-
         document.addEventListener("DOMContentLoaded", () => {
             let loader = document.querySelector(".loader");
 
@@ -71,11 +78,6 @@
                 }
             });
         });
-
-
-
-
-        
     </script>
     
 </body>
