@@ -10,6 +10,11 @@
     </head>
 
 <body>
+    <header class="header">
+        <a href="#" class="logo">Sweet Finds</a>
+    </header>
+
+
     <div class="loader loader-hidden">
         <div class="loader-content">
             <span class="loading-text">Loading...</span>
@@ -20,7 +25,8 @@
     <div class="wrapper">
         <form action="">
             <h1>Sweet Finds</h1>
-            <div class="input-box">
+            <!-- Amazon Link Input Box (Larger) -->
+            <div class="input-box amazon-input">
                 <input type="text" placeholder="Paste your Amazon link here" required>
                 <i class='bx bx-search-alt'></i>
             </div>
@@ -43,7 +49,7 @@
     
         <!-- How to Use Section -->
         <div class="how-to-use-text">
-            <h1>How to Use</h1>
+            <h3>How to Use</h3>
             Follow these simple steps to find your sweet finds:
             <ul>
                 <p>1. Paste a link to a product you are searching for</p>
@@ -74,7 +80,7 @@
 
                     setTimeout(() => {
                         window.location.href = "https://nicolewang1206.github.io/Sweet-Finds/page%202.html";
-                    }, 1000); // Delay before navigating
+                    }, 1000); 
                 }
             });
         });

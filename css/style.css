@@ -26,7 +26,6 @@ img{
 }
 body{
     display: flex;
-    align-items: center;
     justify-content: center;
     color: var(--text-color);
     min-height: 100vh;
@@ -37,14 +36,14 @@ body{
     width: 420px;
     opacity: 0; 
     animation: slideIn 1.5s ease-out forwards; 
-    margin-top: 20px;
+    margin-top: 150px;
     padding: 10px;
     font-size: 18px;
     color: #4C4C6D;
 }
 
 .wrapper h1{
-    font-size: 36px;
+    font-size: 48px;
     text-align: center;
 }
 
@@ -202,6 +201,7 @@ body{
 
 .how-to-use-text {
     opacity: 0; 
+    text-align: center;
     animation: slideIn 1.5s ease-out forwards; 
     margin-top: 20px;
     padding: 10px;
@@ -278,4 +278,50 @@ body{
     to {
         opacity: 1;
     }
+}
+
+/* navigation bar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4C4C6D;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    margin-left: 60px; /* Increased margin-left for more space */
+    transition: color 0.3s ease;
+}
+
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FFE5E2;
+    transition: 3s;
+}
+    
+.navbar a:hover::before {
+    width: 100%;
 }
